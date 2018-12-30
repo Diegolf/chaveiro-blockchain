@@ -1,19 +1,6 @@
 $(document).ready(() => {
 
-    chrome.runtime.onInstalled.addListener(() => {
-        chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
-            chrome.declarativeContent.onPageChanged.addRules([{
-                conditions: [new chrome.declarativeContent.PageStateMatcher({
-                    pageUrl: { hostEquals: 'developer.chrome.com' },
-                })
-                ],
-                actions: [new chrome.declarativeContent.ShowPageAction()]
-            }]);
-        });
-    });
-
-    // web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby.infura.io"));
-    let web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    web3 = new Web3(window.web3.currentProvider);
 
     const conta = "0x4bd0058a33ac0b94795b752c128713661b9b6985";
     const endereco_contrato = "0xf49Ee4A9701A9939e1233D501a582e178BF14fc1";

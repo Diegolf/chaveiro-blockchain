@@ -1,0 +1,23 @@
+{
+  "name": "chaveiro-blockchain",
+  "version": "1.0.0",
+  "description": "<p>Plugin do Google Chrome para poder armazernar chaves (usuários e senhas) em Blockchain da Ethereum </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diegolf/chaveiro-blockchain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Diegolf/chaveiro-blockchain/issues"
+  },
+  "homepage": "https://github.com/Diegolf/chaveiro-blockchain#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nunjucks": "^3.1.6"
+  }
+}
