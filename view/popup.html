@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<title>Extension</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/w3.css">
+<link rel="stylesheet" href="../css/estilos.css">
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" id="w3_open"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item w3-right" >Web3: <i class="far fa-times-circle w3-text-red" id="status_conexao" title="Desconnectado"></i></span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4 w3-center">
+      <img src="../images/chaveiro1.png" class="w3-margin-right" style="width:76px;" />
+    </div>
+    <div class="w3-col s8 w3-bar w3-center">
+      <h4><strong> Bem Vindo(a) ! </strong></h2><br>
+     <p></p>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" id="w3_close" title="close menu"><i class="fa fa-remove fa-fw"></i>  Fechar Menu</a>
+  </div>
+  <div class="w3-container">
+    <h5><strong>Menu de opções</strong></h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding side-menu" value="gerenciar_contrato"><i class="fas fa-file-signature"></i> Gerenciar Contrato </a>
+    <a href="#" class="w3-bar-item w3-button w3-padding side-menu" value="listar"><i class="fas fa-list-ul"></i> Listar Chaves </a>
+    <a href="#" class="w3-bar-item w3-button w3-padding side-menu" value="logout"><i class="fas fa-sign-out-alt"></i> Logout </a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-padding" style="margin-left:300px;margin-top:43px;">
+  
+  <div class="tab-content" id="block">
+
+  </div>
+  
+  <div class="tab-content w3-center w3-card-min" id="login_tab"> 
+    <h3>Digite os dados para desbloquear o chaveiro</h3>
+    <input class="w3-input w3-center" id="end_conta" type="text" placeholder="Chave Privada da Conta">
+    <input class="w3-input w3-center" id="login_end_contrato" type="text" placeholder="Endereço do Chaveiro (opiconal)">
+    <input class="w3-input w3-center" id="pswd" type="password" placeholder="Senha da Conta"><br/><br/>
+    <button class="w3-button w3-indigo w3-round w3-hover-blue" id="verificar_senha" value="verificar"><b> Desbloquear </b></button>
+
+  </div>
+
+  <div class="tab-content w3-center w3-padding" id="gerenciar_contrato_tab"> 
+    <h2><b>Gerenciar contrato</b></h2>
+
+   <div class="w3-container w3-border-bottom w3-padding w3-white w3-card-min">
+      <h3>Enviar novo contrato</h3>
+      <button class="w3-button w3-indigo w3-round w3-hover-blue" id="novo_contrato" value="Novo Contrato"><b> Novo Contrato </b></button>
+    </div>
+
+    <div class="w3-container w3-padding w3-white w3-card-min w3-margin-top">
+      <h3>Carregar um contrato existente</h3>
+      <input class="w3-input w3-center" id="end_contrato" type="text" placeholder="Endereço do contrato"><br/>
+      <button class="w3-button w3-indigo w3-round w3-hover-blue" id="carregar_contrato" value="Carregar Contrato"><b> Carregar Contrato </b></button>
+    </div>
+  </div>
+
+  <div class="tab-content" id="listar_tab"> 
+    <h2 class="w3-center"> Lista de Chaves </h2>
+    <div class="w3-white w3-border w3-margin-top w3-paddinglf">
+      <table class="w3-table w3-white" id="lista_chaves_table">
+        <tr class="w3-border-bottom">
+          <th class="w3-center"> Destino </th>
+          <th class="w3-center"> Usuário </th>
+          <th class="w3-center"> Ações </th>
+        </tr>
+      </table>
+      
+    </div>
+    <h2 class="w3-center w3-margin-top">Nova Chave</h2>
+    <div class="w3-white w3-border w3-paddinglf w3-center">
+        <input class="w3-input w3-center w3-margin-top-min" type="text" placeholder="Destino" id="novo_destino" />
+        <input class="w3-input w3-center w3-margin-top-min" type="text" placeholder="Email" id="novo_usuario" />
+        <input class="w3-input w3-center w3-margin-top-min" type="password" placeholder="Senha" id="nova_senha" />
+        <input class="w3-btn w3-center w3-green w3-round-small ac-btn w3-margin" type="button" id="nova_chave" value=" Adicinar Nova Chave ">
+    </div>
+  </div>
+
+  <div class="w3-animate-bottom" id="toast"></div>
+  <!-- End page content -->
+</div>
+
+<script type="text/javascript" src="../js/web3.min.js"></script>
+<script type="text/javascript" src="../js/aes.js"></script>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+
+</body>
+</html>

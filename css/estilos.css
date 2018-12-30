@@ -1,0 +1,52 @@
+.w3-card-min{box-shadow:0 1px 2px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+.desabilitado{pointer-events:none;text-decoration:line-through}
+#w3_open, .tab-content{display: none;}
+.tab-content{border: 1px;padding: 3px}
+.ac-btn{padding: 2px 8px; font-weight: bold}
+.w3-paddinglf{padding: 0 15px;}
+.w3-margin-top-min{margin-top: 3px;}
+.w3-margin-left-min{margin-left: 3px;}
+#login_tab{padding: 15px; background-color: #fff; margin-top: 20%;}
+.toast-message{border-bottom: 1px solid #555; padding: 5px 0}
+
+#toast {
+    visibility: hidden;
+    min-width: 250px; 
+    background-color: #333; 
+    color: #fff; 
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px; 
+    position: fixed;
+    z-index: 1; 
+    left: 50%; 
+    bottom: 30px;
+    width: 75%;
+    margin-left: -37.5%;
+}
+
+/* Show the toast when clicking on a button (class added with JavaScript) */
+#toast.show {
+    visibility: visible; /* Show the toast */
+}
+
+/* Animations to fade the toast in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
