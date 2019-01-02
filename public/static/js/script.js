@@ -134,9 +134,9 @@ $(document).ready(() => {
             return;
         }
         
-        let destinoCriptografado = CryptoJS.AES.encrypt(_destino, conta).toString();
-        let usuarioCriptografado = CryptoJS.AES.encrypt(_usuario, conta).toString();
-        let senhaCriptografada = CryptoJS.AES.encrypt(_senha, conta).toString();
+        let destinoCriptografado = CryptoJS.AES.encrypt(_destino, ps).toString();
+        let usuarioCriptografado = CryptoJS.AES.encrypt(_usuario, ps).toString();
+        let senhaCriptografada = CryptoJS.AES.encrypt(_senha, ps).toString();
         instancia_contrato.adicionarChave.sendTransaction(destinoCriptografado, usuarioCriptografado, senhaCriptografada,{ from: conta, gas: 1000000 }, callback);
     }
     
@@ -200,14 +200,14 @@ $(document).ready(() => {
                             toast('Ocorreu um erro ao tentar recuperar a chave de id <'+chvs[i]+'> verifique o console para mais informações.', TOAST_DEFAULT_TIME);
                             console.log(err);
                         }else{
-                            let linha = chaves_table_chave.replace('#DESTINO', CryptoJS.AES.decrypt(result[0], conta).toString(CryptoJS.enc.Utf8))
-                                .replace('#USUARIO', CryptoJS.AES.decrypt(result[1], conta).toString(CryptoJS.enc.Utf8))
+                            let linha = chaves_table_chave.replace('#DESTINO', CryptoJS.AES.decrypt(result[0], ps).toString(CryptoJS.enc.Utf8))
+                                .replace('#USUARIO', CryptoJS.AES.decrypt(result[1], ps).toString(CryptoJS.enc.Utf8))
                                 .replace(/#IDCHAVE/g, chvs[chave_percorrida]) ;
                             chaves[chvs[chave_percorrida++]] = result[2];
                             $('#lista_chaves_table').append(linha);
 
                             $('.copiar_senha').off('click').on('click', function() {
-                                copyToClipboard(CryptoJS.AES.decrypt(chaves[$(this).attr('chave')], conta).toString(CryptoJS.enc.Utf8));
+                                copyToClipboard(CryptoJS.AES.decrypt(chaves[$(this).attr('chave')], ps).toString(CryptoJS.enc.Utf8));
                                 toast('Senha copiada para a área de transferência.', TOAST_DEFAULT_TIME);
                             });
 
@@ -241,6 +241,12 @@ $(document).ready(() => {
     $('#verificar_senha_btn').click(() => {
 
         let login_end_contrato = $('#login_end_contrato').val();
+        let pswd = $('#pswd') .val();
+        
+        if ( ! pswd ){
+            toast('Informe a senha para poder descriptografar os dados', TOAST_DEFAULT_TIME);
+            return;
+        }
 
         if( login_end_contrato && ! web3.isAddress(login_end_contrato) ){
             toast('O o endereço do cotrato iformado é inválido.', TOAST_DEFAULT_TIME);
@@ -258,6 +264,10 @@ $(document).ready(() => {
             }
         });
 
+    });
+
+    $('#novo_contrtato_btn').click(function() {
+        $('.side-menu[value="gerenciar_contrato"]').click();
     });
 
     $('.side-menu').click(function(){
@@ -339,7 +349,7 @@ $(document).ready(() => {
     $('#carregar_contrato').click(() => {
 
         let endereco = $('#end_contrato').val();
-        
+
         if ( ! endereco ){
             toast('Informe o endereço do contrato.',TOAST_DEFAULT_TIME);
             return;
@@ -360,6 +370,17 @@ $(document).ready(() => {
                 $('.side-menu[value="listar"]').click();
                 setTimeout(() =>{
                     toast('Carregando as chaves do contrato informado.', TOAST_DEFAULT_TIME);
+                    
+                    if(! ps){
+                        ps = prompt('Informe a senha para descriptografar e criptografar os dados');
+                    }
+
+                    if(ps == null){
+                        toast('Operação cancelada pelo usuário.',TOAST_DEFAULT_TIME);
+                        bloquear();
+                        return;
+                    }
+
                     listar_chaves();
                 },2000);
             }
@@ -387,6 +408,7 @@ $(document).ready(() => {
         $('#w3_open').css('display','none');
         $('.tab-content').css('display','none');
         $('#login_tab').css('display','block');
+        ps = null;
     }
 
     function checkWeb3() {

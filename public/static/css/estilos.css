@@ -1,15 +1,16 @@
 .w3-card-min{box-shadow:0 1px 2px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
 .desabilitado{pointer-events:none;text-decoration:line-through}
-.tab-content{display: none;}
+#w3_open,.tab-content{display: none;}
 .tab-content{border: 1px;padding: 3px}
 .ac-btn{padding: 2px 8px; font-weight: bold}
 .w3-paddinglf{padding: 0 15px;}
 .w3-margin-top-min{margin-top: 3px;}
 .w3-margin-left-min{margin-left: 3px;}
 .w3-sidebar{display: none;}
-#login_tab{padding: 15px; background-color: #fff; margin-top: 20%;}
+.w3-input{background-color: #FFF}
 .toast-message{border-bottom: 1px solid #555; padding: 5px 0}
 #login_end_contrato{margin-bottom: 25px;}
+#pswd{margin-bottom: 15px;}
 
 #toast {
     visibility: hidden;
