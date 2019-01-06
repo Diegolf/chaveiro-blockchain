@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-<title>Extension</title>
+<title> Chaveiro Blockchain </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-<link rel="stylesheet" href="../css/w3.css">
-<link rel="stylesheet" href="../css/estilos.css">
+<link rel="stylesheet" href="static/css/w3.css">
+<link rel="stylesheet" href="static/css/estilos.css">
 <body class="w3-light-grey">
 
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
-  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" id="w3_open"><i class="fa fa-bars"></i>  Menu</button>
+  <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-light-grey" id="w3_open"><i class="fa fa-bars"></i>  Menu</button>
   <span class="w3-bar-item w3-right" >Web3: <i class="far fa-times-circle w3-text-red" id="status_conexao" title="Desconnectado"></i></span>
 </div>
 
@@ -18,7 +18,7 @@
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container w3-row">
     <div class="w3-col s4 w3-center">
-      <img src="../images/chaveiro1.png" class="w3-margin-right" style="width:76px;" />
+      <img src="static/images/chaveiro1.png" class="w3-margin-right" style="width:76px;" />
     </div>
     <div class="w3-col s8 w3-bar w3-center">
       <h4><strong> Bem Vindo(a) ! </strong></h2><br>
@@ -39,27 +39,28 @@
   </div>
 </nav>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="w3-overlay w3-hide-large w3-animate-opacity" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main w3-padding" style="margin-left:300px;margin-top:43px;">
+<div class="w3-main w3-padding" style="margin-top:43px;">
   
   <div class="tab-content" id="block">
 
   </div>
   
-  <div class="tab-content w3-center w3-card-min" id="login_tab"> 
-    <h3>Digite os dados para desbloquear o chaveiro</h3>
-    <input class="w3-input w3-center" id="end_conta" type="text" placeholder="Chave Privada da Conta">
-    <input class="w3-input w3-center" id="login_end_contrato" type="text" placeholder="Endereço do Chaveiro (opiconal)">
-    <input class="w3-input w3-center" id="pswd" type="password" placeholder="Senha da Conta"><br/><br/>
-    <button class="w3-button w3-indigo w3-round w3-hover-blue" id="verificar_senha" value="verificar"><b> Desbloquear </b></button>
-
+  <div class="tab-content w3-center w3-padding" id="login_tab"> 
+    <h1> Bem Vindo(a) !</h1>
+    <div class="w3-card-min w3-padding w3-white w3-margin-top">
+      <h3>Digite o endereço do contrato e a senha para carregar os dados do chaveiro</h3>
+      <input class="w3-input w3-center" id="login_end_contrato" type="text" placeholder="Endereço do Chaveiro">
+      <input class="w3-input w3-center" id="pswd" type="password" placeholder="Senha da Criptografia">
+      <button class="w3-button w3-indigo w3-round w3-hover-blue" id="verificar_senha_btn" value="acessar"><b> Acessar </b></button>
+      <button class="w3-button w3-indigo w3-round w3-hover-blue" id="novo_contrtato_btn" value="novo contrtato"><b> Novo Contrato </b></button>
+    </div>
   </div>
 
   <div class="tab-content w3-center w3-padding" id="gerenciar_contrato_tab"> 
-    <h2><b>Gerenciar contrato</b></h2>
+    <h1 style="margin-bottom: 10px"><b>Gerenciar contrato</b></h1>
 
    <div class="w3-container w3-border-bottom w3-padding w3-white w3-card-min">
       <h3>Enviar novo contrato</h3>
@@ -74,7 +75,7 @@
   </div>
 
   <div class="tab-content" id="listar_tab"> 
-    <h2 class="w3-center"> Lista de Chaves </h2>
+    <h1 class="w3-center" style="margin-bottom: 10px"> Lista de Chaves </h1>
     <div class="w3-white w3-border w3-margin-top w3-paddinglf">
       <table class="w3-table w3-white" id="lista_chaves_table">
         <tr class="w3-border-bottom">
@@ -85,7 +86,7 @@
       </table>
       
     </div>
-    <h2 class="w3-center w3-margin-top">Nova Chave</h2>
+    <h1 class="w3-center w3-margin-top" style="margin-bottom: 10px">Nova Chave</h1>
     <div class="w3-white w3-border w3-paddinglf w3-center">
         <input class="w3-input w3-center w3-margin-top-min" type="text" placeholder="Destino" id="novo_destino" />
         <input class="w3-input w3-center w3-margin-top-min" type="text" placeholder="Email" id="novo_usuario" />
@@ -94,14 +95,15 @@
     </div>
   </div>
 
+  <div class="w3-animate-left" id="toast2"></div>
   <div class="w3-animate-bottom" id="toast"></div>
   <!-- End page content -->
 </div>
 
-<script type="text/javascript" src="../js/web3.min.js"></script>
-<script type="text/javascript" src="../js/aes.js"></script>
-<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="static/js/web3.min.js"></script>
+<script type="text/javascript" src="static/js/aes.js"></script>
+<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="static/js/script.js"></script>
 
 </body>
 </html>

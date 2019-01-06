@@ -1,9 +1,13 @@
 # chaveiro-blockchain
-Plugin do Google Chrome para poder armazernar chaves (usuários e senhas) em Blockchain da Ethereum
+<p> Aplicação para poder armazernar chaves (usuários e senhas) em Blockchain da Ethereum utilizando Metamask e a biblioteca web3.js para javascript</p>
 
-Atualmente funciona em uma blockchain local de testes (Geth).
-
-TODO
-    - Modificar para funcionar na Rinkeby Network;
-    - Adicionar a função de leitura de arquivo para iniciar a aplicação;
-    - 
+<b>TODO</b>
+<ul>
+    <li> Correções no código (atualizar o código para que posso funcionar em uma network real no lugar de um teste local com Geth) 
+        <ul>
+            <li> Adicionar um feedback enquanto uma transação estiver pendente </li>
+        </ul>
+    </li>
+    <li> Melhorias na interface (resposividade) </li>
+    <li>  </li>
+</ul> 
