@@ -4,6 +4,7 @@
   "description": "<p>Plugin do Google Chrome para poder armazernar chaves (usuários e senhas) em Blockchain da Ethereum </p>",
   "main": "index.js",
   "scripts": {
+    "start":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
