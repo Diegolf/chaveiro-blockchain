@@ -247,10 +247,10 @@ $(document).ready(() => {
                                                     console.log(err);
                                                 }else{
                                                     if(response.status == '0x1'){
-                                                        toast('Transação confirmada',TOAST_DEFAULT_TIME);
+                                                        toast('Transação confirmada, chave removida.',TOAST_DEFAULT_TIME);
                                                         botao.parent().parent().remove();
                                                     }else{
-                                                        toast('Ocorreu um erro ao confirmar a transação',TOAST_DEFAULT_TIME);
+                                                        toast('Ocorreu um erro ao confirmar a transação (Remover Chave).',TOAST_DEFAULT_TIME);
                                                     }
                                                 }
                                             });
@@ -263,7 +263,7 @@ $(document).ready(() => {
                     });
                 }
             }else{
-                toast('Ocorreu um erro ao tentar ler o ID das chaves. Verifique o console para mais informações', TOAST_DEFAULT_TIME);
+                toast('Ocorreu um erro ao tentar ler o ID das chaves. Verifique o console para mais informações.', TOAST_DEFAULT_TIME);
                 console.log(err);
             }
         });
@@ -286,7 +286,7 @@ $(document).ready(() => {
         ps = $('#pswd').val();
         
         if ( ! ps ){
-            toast('Informe a senha para poder descriptografar os dados', TOAST_DEFAULT_TIME);
+            toast('Informe a senha para poder descriptografar os dados.', TOAST_DEFAULT_TIME);
             return;
         }
 
@@ -345,7 +345,7 @@ $(document).ready(() => {
 
         adicionarChave(destino, usuario, senha, (err, result) => {
             if(err){
-                toast('Ocorreu um erro ao tentar adicionar a chave. Verifique o console para mais informações', TOAST_DEFAULT_TIME);
+                toast('Ocorreu um erro ao tentar adicionar a chave. Verifique o console para mais informações.', TOAST_DEFAULT_TIME);
                 console.log(err);
             }else{
                 
@@ -364,10 +364,10 @@ $(document).ready(() => {
                             console.log(err);
                         }else{
                             if(response.status == '0x1'){
-                                toast('Transação confirmada',TOAST_DEFAULT_TIME);
+                                toast('Transação confirmada, nova chave adicionada.',TOAST_DEFAULT_TIME);
                                 listar_chaves();
                             }else{
-                                toast('Ocorreu um erro ao confirmar a transação',TOAST_DEFAULT_TIME);
+                                toast('Ocorreu um erro ao confirmar a transação (Nova Chave).',TOAST_DEFAULT_TIME);
                             }
                         }
                     });
@@ -383,17 +383,15 @@ $(document).ready(() => {
             return;
         }
 
-        toast('Transação enviada. Por favor, aguarde a confirmação da transação ...', TOAST_DEFAULT_TIME);    
-        toast2('Novo Contrato, aguardando confirmação: <span>'+((TRANSACTION_CHECK+800)/1000)+'</span> ',TRANSACTION_CHECK);
-
         enviarNovoContrato( (err, myContract) => {
             
             if (!err) {
                 if (!myContract.address) {
-                    console.log("Hash da transação: " + myContract.transactionHash);
-
+                    console.log("Hash da transação de novo contrato: " + myContract.transactionHash);
+                    toast('Transação enviada. Por favor, aguarde a confirmação da transação ...', TOAST_DEFAULT_TIME);    
+                    toast2('Novo Contrato, aguardando confirmação: <span>'+((TRANSACTION_CHECK+4800)/1000)+'</span> ',TRANSACTION_CHECK+4000);
                 } else {
-                    toast('Contrato criado. Endereço copiado para a área de transferência e para o console. Guarde esse endereço para poder utilizar futuramente.');
+                    toast('Contrato criado. Endereço copiado para a área de transferência e para o console. Guarde esse endereço para poder utilizar futuramente.',TOAST_DEFAULT_TIME);
                     console.log("Transação confirmada, endereço do contrato: " + myContract.address);
                     copyToClipboard(myContract.address);
 

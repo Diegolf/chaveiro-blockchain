@@ -33,7 +33,7 @@
     min-width: 350px; 
     background-color: rgba(20, 20, 20, 0.6); 
     color: #fff; 
-    text-align: left !important;
+    text-align: left;
     border-radius: 2px;
     padding: 3px; 
     position: fixed;
