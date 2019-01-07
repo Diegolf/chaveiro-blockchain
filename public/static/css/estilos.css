@@ -30,22 +30,16 @@
 
 #toast2 {
     visibility: hidden;
-    min-width: 200px; 
-    background-color: #333; 
+    min-width: 350px; 
+    background-color: rgba(20, 20, 20, 0.6); 
     color: #fff; 
-    text-align: center;
+    text-align: left !important;
     border-radius: 2px;
-    padding: 6px; 
+    padding: 3px; 
     position: fixed;
     z-index: 1; 
     left: 2%; 
     top: 60px;
-    width: 40%;
-}
-
-/* Show the toast when clicking on a button (class added with JavaScript) */
-#toast.show {
-    visibility: visible; /* Show the toast */
 }
 
 /* Animations to fade the toast in and out */

@@ -3,11 +3,6 @@
 
 <b>TODO</b>
 <ul>
-    <li> Correções no código (atualizar o código para que posso funcionar em uma network real no lugar de um teste local com Geth) 
-        <ul>
-            <li> Adicionar um feedback enquanto uma transação estiver pendente </li>
-        </ul>
-    </li>
-    <li> Melhorias na interface (resposividade) </li>
+    <li> Limpar todos os timeOuts quando o aplicativo for bloquado </li>
     <li>  </li>
 </ul> 
