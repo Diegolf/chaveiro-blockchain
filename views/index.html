@@ -15,7 +15,7 @@
 </div>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:300px;overflow: auto;" id="mySidebar"><br>
   <div class="w3-container w3-row">
     <div class="w3-col s4 w3-center">
       <img src="static/images/chaveiro1.png" class="w3-margin-right" style="width:76px;" />
@@ -50,7 +50,7 @@
   
   <div class="tab-content w3-center w3-padding" id="login_tab"> 
     <h1> Bem Vindo(a) !</h1>
-    <div class="w3-card-min w3-padding w3-white w3-margin-top">
+    <div class="w3-card-min w3-padding w3-white w3-margin-top box">
       <h3>Digite o endereço do contrato e a senha para carregar os dados do chaveiro</h3>
       <input class="w3-input w3-center" id="login_end_contrato" type="text" placeholder="Endereço do Chaveiro">
       <input class="w3-input w3-center" id="pswd" type="password" placeholder="Senha da Criptografia">
@@ -62,12 +62,12 @@
   <div class="tab-content w3-center w3-padding" id="gerenciar_contrato_tab"> 
     <h1 style="margin-bottom: 10px"><b>Gerenciar contrato</b></h1>
 
-   <div class="w3-container w3-border-bottom w3-padding w3-white w3-card-min">
+   <div class="w3-container w3-border-bottom w3-padding w3-white w3-card-min box">
       <h3>Enviar novo contrato</h3>
       <button class="w3-button w3-indigo w3-round w3-hover-blue" id="novo_contrato" value="Novo Contrato"><b> Novo Contrato </b></button>
     </div>
 
-    <div class="w3-container w3-padding w3-white w3-card-min w3-margin-top">
+    <div class="w3-container w3-padding w3-white w3-card-min w3-margin-top box">
       <h3>Carregar um contrato existente</h3>
       <input class="w3-input w3-center" id="end_contrato" type="text" placeholder="Endereço do contrato"><br/>
       <button class="w3-button w3-indigo w3-round w3-hover-blue" id="carregar_contrato" value="Carregar Contrato"><b> Carregar Contrato </b></button>

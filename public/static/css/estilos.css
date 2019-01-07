@@ -9,6 +9,7 @@
 .w3-sidebar{display: none;}
 .w3-input{background-color: #FFF}
 .toast-message{border-bottom: 1px solid #555; padding: 5px 0}
+.box{max-width: 900px; padding: 3% !important; margin: 0 auto}
 #login_end_contrato{margin-bottom: 25px;}
 #pswd{margin-bottom: 15px;}
 
