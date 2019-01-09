@@ -28,7 +28,7 @@ $(document).ready(() => {
 
     const TOAST_DEFAULT_TIME = 7000;
     const TRANSACTION_CHECK = 17200;
-    const TEMPO_DESBLOQUEIO = 60000;
+    const TEMPO_DESBLOQUEIO = 90000;
 
     let instancia_contrato;
     let conectado = false;
