@@ -15,13 +15,13 @@ Para poder utilizar o chaveiro, é necessário instalar o plugin do <code> MetaM
 Na página para gereciamento e instalação de plugins para o navegador (no exemplo utilizaremos Google Chrome) busque por <code>MetaMask</code> e adicione ao navegador:
 
 <p align="center">
-  <img src="img/1.jpg?raw=true"/>
+  <img src="img/1.png?raw=true"/>
 </p>
 
 Após a instalação, uma página de boas vinda deve abrir. Clique em <code>CONTINUE</code> :
 
 <p align="center">
-  <img src="img/2.jpg?raw=true"/>
+  <img src="img/2.png?raw=true"/>
 </p>
 
 Agora devemos criar uma senha. Essa senha será necessária para poder acessar a sua carteira e realizar transações. Digite a senha e clique em <code>CREATE</code>.
@@ -29,31 +29,31 @@ Nesta tela, há também a opção <code>Import with seed phrase
 </code> para o caso de que você já tenha uma carteira <code>Ethereum</code> e queira apenas importar ela utilizando o código mnemônico (veremos sobre isso em seguida).
 
 <p align="center">
-  <img src="img/3.jpg?raw=true"/>
+  <img src="img/3.png?raw=true"/>
 </p>
 
 A seguir é exibido um texto explicando que uma imagem única foi gerada para a sua conta e que essa imagem vai aparecer sempre que for necessário confirmar uma transação. Clique em <code>NEXT</code>.
 
 <p align="center">
-  <img src="img/4.jpg?raw=true"/>
+  <img src="img/4.png?raw=true"/>
 </p>
 
 Agora os termos de uso. Leia com atenção e após a leitura clique em <code>ACCEPT</code>.
 
 <p align="center">
-  <img src="img/5.jpg?raw=true"/>
+  <img src="img/5.png?raw=true"/>
 </p>
 
 Notícia de privacidade dizendo que sua conta estará visível para todos os sites que você visitar, por isso recomenda-se que você desconecte-se de sua conta sempre que terminar de utilizar. Quando terminar de ler clique em <code>ACCEPT</code>.
 
 <p align="center">
-  <img src="img/6.jpg?raw=true"/>
+  <img src="img/6.png?raw=true"/>
 </p>
 
 Aviso de <i>Phishing</i> dizendo que há vários casos de sites foram temporariamente comprometidos. O que involve abrir janelas falsas do <code>MetaMask</code> pedindo pelo código mnemônico do usuário. O aviso diz que o MetaMask nunca vai pedir tal informação e pede para que os usuários reportem tais ocorrências para o suporte em <code> support@metamask.io</code>. Após a leitura clique em <code>ACCPET</code>.
 
 <p align="center">
-  <img src="img/7.jpg?raw=true"/>
+  <img src="img/7.png?raw=true"/>
 </p>
 
 Agora é gerado o seu Mnemônico, uma sequência de 12 (doze) palavras aleatórias que serão utilizadas para gerar a chave privada. É possivel modificar as palavras agora e elas serão utilizadas sempre que você quiser importar a sua carteira em outro navegador ou máquina. 
@@ -62,13 +62,13 @@ Agora é gerado o seu Mnemônico, uma sequência de 12 (doze) palavras aleatóri
 Após escolher e memorizar o seu mnemônico clique em <code>NEXT</code>
 
 <p align="center">
-  <img src="img/8.jpg?raw=true"/>
+  <img src="img/8.png?raw=true"/>
 </p>
 
 Agora, para confirmar, basta clicar nas palavras na mesma sequência do seu mnemônico e clicar em <code>CONFIRM</code>.
 
 <p align="center">
-  <img src="img/10.jpg?raw=true"/>
+  <img src="img/10.png?raw=true"/>
 </p>
 
 Agora toda vez que for utilizar a sua conta Ethereum será necessário apenas informar a sua senha no plugin do MetaMask.
@@ -78,7 +78,7 @@ Agora toda vez que for utilizar a sua conta Ethereum será necessário apenas in
 Vale lembrar que a <code>Main Network</code> da ethereum utiliza dinheiro real para realizar transações, por isso, para poder testar a aplicação utilizaremos a network <code>Rinkeby</code> da Ethereum que é possivel receber alguns Ethers "de graça" (o Ether nessa network não tem valor real). Na tela que abriu modifique a network atual para a Rinkeby:
 
 <p align="center">
-  <img src="img/9.jpg?raw=true"/>
+  <img src="img/9.png?raw=true"/>
 </p>
 
 Para receber alguns Ethers na network Rinkeby é necessário seguir alguns passos:
@@ -86,25 +86,25 @@ Para receber alguns Ethers na network Rinkeby é necessário seguir alguns passo
 ##### 1. Copie o endereço da sua conta:
 
 <p align="center">
-  <img src="img/11.jpg?raw=true"/>
+  <img src="img/11.png?raw=true"/>
 </p>
 
 ##### 2. Faça uma publicação no Google+, Twitter ou Facebook com apenas o endereço da sua conta: 
 
 <p align="center">
-  <img src="img/12.jpg?raw=true"/>
+  <img src="img/12.png?raw=true"/>
 </p>
 
 ##### 3. Copie o endereço da postagem, cole em: https://faucet.rinkeby.io/ e selecione à direita a quantiade de Ether que deseja receber. Os tempos informados significam a quantiade de tempo necessário esperar para requistar mais Ether utilizando a mesma conta (Google+ no caso):
 
 <p align="center">
-  <img src="img/13.jpg?raw=true"/>
+  <img src="img/13.png?raw=true"/>
 </p>
 
 Uma tela de confirmação para evitar bots será exibida. Após a confirmação basta aguardar alguns segundos que os Ethers serão confirmados em sua conta.
 
 <p align="center">
-  <img src="img/14.jpg?raw=true"/>
+  <img src="img/14.png?raw=true"/>
 </p>
 
 ## Utilizando a aplicação
@@ -134,7 +134,7 @@ Na parte superior direita da tela há um ícone que indica o status da conexão 
 Inialmente vamos clicar em <code>Novo Contrato</code>
 
 <p align="center">
-  <img src="img/15.jpg?raw=true"/>
+  <img src="img/15.png?raw=true"/>
 </p>
 
 Nesta tela vamos clicar em <code>Novo Contrato</code>. 
@@ -147,7 +147,7 @@ Após isso a transação será enviada e deve demorar entre 10 à 22 segundos pa
 </ul>
 
 <p align="center">
-  <img src="img/16.jpg?raw=true"/>
+  <img src="img/16.png?raw=true"/>
 </p>
 
 Agora será requisitado uma senha para poder criptografar os dados que serão enviados para a blockchain. Lembrando que esta não é as sua senha da carteira e sim qualquer sequência de caracteres de sua preferência.
@@ -161,7 +161,7 @@ Para adicionar novas chaves ao seu chaveiros basta informar os três campos <cod
 Caso a transação demore mais do que 17 segundos (o tempo médio é de 15 segundos) para ser confirmada pela Network, basta deslogar e logar novamente para listar as chaves.
 
 <p align="center">
-  <img src="img/17.jpg?raw=true"/>
+  <img src="img/17.png?raw=true"/>
 </p>
 
 No quando de Lista de Chaves há dois botões para cada chave:
@@ -171,7 +171,7 @@ No quando de Lista de Chaves há dois botões para cada chave:
 </ul>
 
 <p align="center">
-  <img src="img/18.jpg?raw=true"/>
+  <img src="img/18.png?raw=true"/>
 </p>
 
 ### Menu de opções
@@ -187,5 +187,5 @@ Após acessar um contrato, um menu aparece no canto superior esquerdo com as op�
 <strong>Importante:</strong> por motivos de segurança a aplicação vai desconectar automaticamente após um minuto e meio. Ainda será possível ver o status das transações que estiverem pendentes.
 
 <p align="center">
-  <img src="img/19.jpg?raw=true"/>
+  <img src="img/19.png?raw=true"/>
 </p>
