@@ -2,17 +2,15 @@
 
 Aplicação para poder armazernar chaves (usuários e senhas) em Blockchain da Ethereum utilizando MetaMask e a biblioteca web3.js para javascript
 
-#
 ## Iniciando
+<hr>
 
 O aplicativo está disponível em https://chaveiro-blockchain.herokuapp.com para testes e uso.
 
-#
 ### Prerequesitos
 
 Para poder utilizar o chaveiro, é necessário instalar o plugin do <code> MetaMask </code> no navegador, ter uma conta e Ether.
 
-#
 #### Instalando e criando uma nova carteira no MetaMask
 
 Na página para gereciamento e instalação de plugins para o navegador (no exemplo utilizaremos Google Chrome) busque por <code>MetaMask</code> e adicione ao navegador:
@@ -76,7 +74,6 @@ Agora, para confirmar, basta clicar nas palavras na mesma sequência do seu mnem
 
 Agora toda vez que for utilizar a sua conta Ethereum será necessário apenas informar a sua senha no plugin do MetaMask.
 
-#
 #### Como conseguir Ether para utulizar network de teste da Ethereum
 
 Vale lembrar que a <code>Main Network</code> da ethereum utiliza dinheiro real para realizar transações, por isso, para poder testar a aplicação utilizaremos a network <code>Rinkeby</code> da Ethereum que é possivel receber alguns Ethers "de graça" (o Ether nessa network não tem valor real). Na tela que abriu modifique a network atual para a Rinkeby:
@@ -87,21 +84,18 @@ Vale lembrar que a <code>Main Network</code> da ethereum utiliza dinheiro real p
 
 Para receber alguns Ethers na network Rinkeby é necessário seguir alguns passos:
 
-#
 ##### 1. Copie o endereço da sua conta:
 
 <p align="center">
   <img src="img/11.png?raw=true"/>
 </p>
 
-#
 ##### 2. Faça uma publicação no Google+, Twitter ou Facebook com apenas o endereço da sua conta: 
 
 <p align="center">
   <img src="img/12.png?raw=true"/>
 </p>
 
-#
 ##### 3. Copie o endereço da postagem, cole em: https://faucet.rinkeby.io/ e selecione à direita a quantiade de Ether que deseja receber. Os tempos informados significam a quantiade de tempo necessário esperar para requistar mais Ether utilizando a mesma conta (Google+ no caso):
 
 <p align="center">
@@ -114,8 +108,8 @@ Uma tela de confirmação para evitar bots será exibida. Após a confirmação 
   <img src="img/14.png?raw=true"/>
 </p>
 
-#
 ## Utilizando a aplicação
+<hr>
 
 Há duas formas de utilizar a aplicação, é possivel acessar <code>https://chaveiro-blockchain.herokuapp.com</code> ou clonar o projeto e rodar o servidor localmente:
 Lembrando que para poder rodar a aplicação localmente é necessário ter o <code>NodeJS</code> instalado.
@@ -129,7 +123,6 @@ Lembrando que para poder rodar a aplicação localmente é necessário ter o <co
 
 Agora basta acessar <code>127.0.0.1:5000</code> no navegador.
 
-#
 ### Primeiros passos
 
 Ao acessar a página, uma tela de boas vinda será exibida. Nela há dois campos a serem preenchidos para poder acessar o chaveiro:
@@ -161,7 +154,6 @@ Após isso a transação será enviada e deve demorar entre 10 à 22 segundos pa
 
 Agora será requisitado uma senha para poder criptografar os dados que serão enviados para a blockchain. Lembrando que esta não é as sua senha da carteira e sim qualquer sequência de caracteres de sua preferência.
 
-#
 ### Chaveiro
 
 Nesta tela há dois principais quadros <code>Lista de chaves</code> e <code>Nova Chave</code>:
@@ -184,7 +176,6 @@ No quando de Lista de Chaves há dois botões para cada chave:
   <img src="img/18.png?raw=true"/>
 </p>
 
-#
 ### Menu de opções
 
 Após acessar um contrato, um menu aparece no canto superior esquerdo com as opções:
